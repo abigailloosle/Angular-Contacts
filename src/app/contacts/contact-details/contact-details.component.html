@@ -1,0 +1,48 @@
+<div class="row panel panel-default">
+  <div class="col-xs-12 panel-heading">
+    <h2> {{ contact.name }} </h2>
+    <img
+      [src]="contact.imageUrl"
+      alt="{{ contact.name }}"
+      class="img-responsive"
+      style="max-height: 100px;">
+    <span class="pull-right">
+      <a class="btn btn-primary"
+         style="margin-right: 1em;"
+         routerLink="edit">
+        Edit
+      </a>
+      <a class="btn btn-danger" (click)="onDelete()"> Delete </a>
+    </span>
+  </div>
+
+
+  <hr>
+
+  <div class="row panel-body">
+    <div class="col-xs-12" style= 'padding-top: 1em;'>
+      <a href="#" class="list-group-item clearfix">
+        <!--<div class="pull-left" *ngFor="let contact of contacts">-->
+        <div class="pull-left">
+          <p class="list-group-item-text"> <label>Email:</label> {{ contact?.email }} </p>
+          <p class="list-group-item-text"> <label>Phone:</label> {{ contact?.phone }} </p>
+
+          <div class="form-group" *ngIf="contact.group">
+            <label for="groupList">Group contacts</label>
+
+            <div class="row" id="groupList"
+                 style="min-height: 3rem;">
+
+              <div *ngFor="let contact of contact.group; let i = index">
+                <div>
+                  <app-contact-item class="col-sm-11" [contact]="contact"></app-contact-item>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
