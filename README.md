@@ -1,5 +1,7 @@
 # A Contact Organization Application
 
+The purpose of this project was to create an app to organize classes, interact with a database, and edit contacts. While I currently haven't uploaded this content onto the web, the project is available here. I built this modular app with assistance from a team, but we all worked on our own code, so all code you see here is my own.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
 ## Development server
